@@ -10,100 +10,10 @@
 <body>
     <div>
         <div>
-            <h1>Todo App</h1>
-        </div>
-        <input id="input1" type="text">
-        <button onclick="sendData()">Send</button>
-        <button onclick="deleteAll()">Delete All</button>
-        <div id="div1">
-        </div>
+            <h1>Hello 08-Dec-2020 is my first day in Bootcamp 2020  </h1>
 
     </div>
 
-    <script>
-        var i = 0;
-        const div1 = document.getElementById('div1');
-
-        function sendData() {
-            var div2 = document.createElement('div');
-
-            var inputValue = document.getElementById('input1').value;
-            var para = document.createElement('li');
-            var btn = document.createElement('button');
-            var btn2 = document.createElement('button');
-
-
-            para.innerHTML = inputValue;
-
-            para.setAttribute('id', i)
-            btn.innerHTML = 'delete';
-            btn2.innerHTML = 'edit';
-
-            btn.setAttribute('id', i)
-            btn2.setAttribute('id', i)
-
-            btn.setAttribute('onclick', `Delete(${i})`)
-            btn2.setAttribute('onclick', `Edit(${i})`)
-
-            div1.appendChild(div2);
-            div2.appendChild(para);
-            div2.appendChild(btn)
-            div2.appendChild(btn2)
-
-            i++
-            document.getElementById('input1').value = '';
-
-        }
-
-        function Delete(id) {
-            var x = document.getElementById(id).parentElement.remove();
-        }
-
-        function Edit(id) {
-            // var inputValue = document.getElementById('input1').value;
-
-            var x = document.getElementById(id);
-            inputValue = x
-
-
-        }
-
-        function deleteAll() {
-            var node = document.getElementById("div1");
-            while (node.firstChild) {
-                node.removeChild(div1.firstChild);
-            }
-        }
-
-        var array = [1, 2, 37, 4, 8]
-
-        function sortArray() {
-            console.log(array)
-        }
-        sortArray();
-
-
-        function bubbleSort(array) {
-            var done = false;
-            while (!done) {
-                done = true;
-                for (var i = 1; i < array.length; i += 1) {
-                    if (array[i - 1] > array[i]) {
-                        done = false;
-                        var tmp = array[i - 1];
-                        array[i - 1] = array[i];
-                        array[i] = tmp;
-                    }
-                }
-            }
-
-            return array;
-        }
-
-        var numbers = [12, 10, 15, 11, 14, 13, 16];
-        bubbleSort(numbers);
-        console.log(numbers);
-    </script>
 </body>
 
 </html>
